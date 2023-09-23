@@ -4,9 +4,32 @@ namespace App\Controllers;
 
 class MainController extends BaseController
 {
-    public function index() 
+    public $music;
+
+    public function __construct()
     {
-        return view('main');
+        $this->music = new \App\Models\MainModel;        
     }
 
+    public function addAudio()
+    {
+        if ($file = $this->request->getFile('audio')) {
+            $destination = WRITEPATH . 'uploads';
+            $file->move($destination);
+            $audioFileName = $file->getName();
+            $newAudio = [
+                'audio' => $audioFileName,
+            ];
+            $this->music->insert($newAudio);
+        }
+        return redirect()->to('/main');
+    }    
+
+    public function index() 
+    {
+        $allAudio = $this->music->findAll(); 
+
+        return view('main', ['allAudio' => $allAudio]);
+    }
 }
+

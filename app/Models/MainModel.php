@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class MainModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'students';
+    protected $table            = 'table_audio';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['studentID', 'FullName', 'YearLevel', 'Program'];
+    protected $allowedFields    = ['audio'];
 
     // Dates
     protected $useTimestamps = false;

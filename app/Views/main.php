@@ -58,25 +58,47 @@
 
 
 <!-- This is for the add music -->
-<div class="modal fade" id="addMusic" tabindex="-1" aria-labelledby="addMusicLabel" aria-hidden="true">
+<div class="modal fade" id="addAudio" tabindex="-1" aria-labelledby="addAudioLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addMusicLabel">Add Audio</h5>
+        <h5 class="modal-title" id="addAudioLabel">Add Audio</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
       <div class="modal-body">
-        <form>
+        <form action="/addAudio" method="post" enctype="multipart/form-data">
           <div class="mb-3">
-            <input type="file" class="form-control" id="musicName" name="musicName" placeholder="music title">
+            <input type="file" value="<?php ['audio'] ?>" class="form-control" id="audio" name="audio" accept="audio/*">
           </div>
-        </form>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save</button>
+      <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- This is for the add music to playlist -->
+<div class="modal fade" id="addToPlaylist" tabindex="-1" aria-labelledby="addToPlaylistLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addToPlaylistLabel">Select from Playlist</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form action="/addAudio" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+          </div>
+      </div>
+
+      <div class="modal-footer">
+      <button type="submit" class="btn btn-primary">Add</button>
+      </form>
       </div>
     </div>
   </div>
@@ -101,8 +123,8 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Create</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Back</button>
+      <button type="button" class="btn btn-primary">Create</button>
       </div>
     </div>
   </div>
@@ -113,7 +135,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Playlist</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -125,8 +147,7 @@
 
         </div>
         <div class="modal-footer">
-          <a href="#" data-bs-dismiss="modal">Close</a>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#createPlaylist">Create New</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPlaylist">Create New</button>
 
         </div>
       </div>
@@ -141,14 +162,18 @@
   My Playlist
 </button>
 
-    <audio id="audio" controls autoplay></audio>
-    <ul id="playlist">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAudio">Add Audio</button>
 
-        <li data-src="/Music/your music src">music name <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMusic">+
-        </button>
-        </li>
+  <audio id="audio" controls autoplay></audio>
+  <ul id="playlist">
+      <?php foreach ($allAudio as $audio): ?>
+          <li data-src="<?= 'writable/uploads/' . $audio['audio'] ?>">
+              <?= $audio['audio'] ?>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">+</button>
+          </li>
+      <?php endforeach; ?>
+  </ul>
 
-    </ul>
     <div class="modal" id="myModal">
       <div class="modal-dialog">
         <div class="modal-content">
