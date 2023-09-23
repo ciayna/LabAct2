@@ -1,0 +1,9 @@
+CRITICAL - 2023-09-20 15:05:35 --> New expressions are not supported in this context
+in APPPATH\Controllers\MainController.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-20 15:11:29 --> New expressions are not supported in this context
+in APPPATH\Controllers\MainController.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-20 15:17:29 --> New expressions are not supported in this context
+in APPPATH\Controllers\MainController.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
