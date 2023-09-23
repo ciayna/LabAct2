@@ -8,4 +8,5 @@ class MainController extends BaseController
     {
         return view('main');
     }
+
 }

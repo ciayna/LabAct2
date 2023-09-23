@@ -1,0 +1,90 @@
+CRITICAL - 2023-09-23 14:20:43 --> Invalid file: "app/Music/Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('app/Music/Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('app/Music/Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('app/Music/Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:11 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:12 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:12 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:12 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:12 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 14:21:13 --> Invalid file: "Glue Song - beabadoobee.mp3"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Glue Song - beabadoobee.mp3')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Glue Song - beabadoobee.mp3', [], true)
+ 3 APPPATH\Controllers\MainController.php(13): view('Glue Song - beabadoobee.mp3')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->music()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 15:18:19 --> Invalid file: "main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('main.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(9): view('main')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-23 15:18:26 --> Invalid file: "main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('main.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(9): view('main')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')

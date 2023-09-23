@@ -57,6 +57,58 @@
 <body>
 
 
+<!-- This is for the add music -->
+<div class="modal fade" id="addMusic" tabindex="-1" aria-labelledby="addMusicLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addMusicLabel">Add Audio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="file" class="form-control" id="musicName" name="musicName" placeholder="music title">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- This is for the create new playlist -->
+<div class="modal fade" id="createPlaylist" tabindex="-1" aria-labelledby="createPlaylistLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createPlaylistLabel">Create Playlist</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="playlistName" name="playlistName" placeholder="playlist name">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -92,7 +144,8 @@
     <audio id="audio" controls autoplay></audio>
     <ul id="playlist">
 
-        <li data-src="/your music src">music name
+        <li data-src="/Music/your music src">music name <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMusic">+
+        </button>
         </li>
 
     </ul>
