@@ -4,11 +4,13 @@ namespace App\Controllers;
 
 class MainController extends BaseController
 {
-    public $music;
+    private $music;
+    private $playlist;
 
     public function __construct()
     {
-        $this->music = new \App\Models\MainModel;        
+        $this->music = new \App\Models\MainModel;
+        $this->playlist = new \App\Models\PlaylistModel;        
     }
 
     public function addAudio()
@@ -24,6 +26,11 @@ class MainController extends BaseController
         }
         return redirect()->to('/main');
     }    
+
+    public function addPlaylist() 
+    {
+        
+    }
 
     public function index() 
     {
