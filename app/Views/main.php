@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src='<?php echo base_url("js/script.js"); ?>'></script>
     <style>
     body {
          font-family: Arial, sans-serif;
@@ -68,7 +69,7 @@
       <div class="modal-body">
         <form action="/addAudio" method="post" enctype="multipart/form-data">
           <div class="mb-3">
-            <input type="file" value="<?php ['audio'] ?>" class="form-control" id="audio" name="audio" accept="audio/*">
+            <input type="file" value="" class="form-control" id="audio" name="audio" accept="audio/*">
           </div>
       </div>
 
@@ -162,11 +163,10 @@
 </button>
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAudio">Add Audio</button>
-
   <audio id="audio" controls autoplay></audio>
   <ul id="playlist">
       <?php foreach ($allAudio as $audio): ?>
-          <li data-src="<?= 'uploads/' . $audio['audio'] ?>">
+          <li data-src='<?php echo base_url("music/" . $audio['audio']); ?>' >
               <?= $audio['audio'] ?>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">+</button>
           </li>
@@ -243,7 +243,7 @@
                 const track = playlistItems[trackIndex];
                 const trackSrc = track.getAttribute('data-src');
                 audio.src = trackSrc;
-                audio.play();
+                audio.play;
                 currentTrack = trackIndex;
             }
         }

@@ -14,7 +14,7 @@ class MainController extends BaseController
     public function addAudio()
     {
         if ($file = $this->request->getFile('audio')) {
-            $destination = WRITEPATH . 'uploads';
+            $destination = './music';
             $file->move($destination);
             $audioFileName = $file->getName();
             $newAudio = [
