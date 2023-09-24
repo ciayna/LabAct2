@@ -56,7 +56,6 @@
 </head>
 <body>
 
-
 <!-- This is for the add music -->
 <div class="modal fade" id="addAudio" tabindex="-1" aria-labelledby="addAudioLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -167,12 +166,13 @@
   <audio id="audio" controls autoplay></audio>
   <ul id="playlist">
       <?php foreach ($allAudio as $audio): ?>
-          <li data-src="<?= 'writable/uploads/' . $audio['audio'] ?>">
+          <li data-src="<?= 'uploads/' . $audio['audio'] ?>">
               <?= $audio['audio'] ?>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">+</button>
           </li>
       <?php endforeach; ?>
   </ul>
+
 
     <div class="modal" id="myModal">
       <div class="modal-dialog">
