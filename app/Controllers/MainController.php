@@ -29,14 +29,27 @@ class MainController extends BaseController
 
     public function addPlaylist() 
     {
-        
+        $addPlaylist = [
+            'playlistName' => $this->request->getPost('playlistName'),
+        ];
+        if (!empty($addPlaylist['playlistName'])) 
+        {
+            $this->playlist->insert($addPlaylist);
+        }
+        return redirect()->to('/main');
     }
 
     public function index() 
     {
-        $allAudio = $this->music->findAll(); 
+        $data = [
+            'allAudio' => $this->music->findAll(),
+            'playlists' => $this->playlist->findAll(),
+        ];
+        
+        $data['music'] = $this->playlist->findAll();
+        $data['playlist'] = $this->music->findAll(); 
 
-        return view('main', ['allAudio' => $allAudio]);
+        return view('main', $data);
     }
 }
 

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
     body {
@@ -50,6 +50,29 @@
      }
 
      #playlist li.active {
+         background-color: #007bff;
+         color: #fff;
+     }
+
+     
+     #playlist1 {
+         list-style: none;
+         padding: 0;
+     }
+
+     #playlist1 li {
+         cursor: pointer;
+         padding: 10px;
+         background-color: #eee;
+         margin: 5px 0;
+         transition: background-color 0.2s ease-in-out;
+     }
+
+     #playlist1 li:hover {
+         background-color: #ddd;
+     }
+
+     #playlist1 li.active {
          background-color: #007bff;
          color: #fff;
      }
@@ -114,16 +137,16 @@
       </div>
 
       <div class="modal-body">
-        <form>
+        <form action="/addPlaylist" method='post'>
           <div class="mb-3">
-            <input type="text" class="form-control" id="playlistName" name="playlistName" placeholder="playlist name">
+            <input type="text" class="form-control" id="playlistName" name="playlistName" value="<?php ['playlistName']?>" placeholder="playlist name">
           </div>
-        </form>
       </div>
 
       <div class="modal-footer">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Back</button>
-      <button type="button" class="btn btn-primary">Create</button>
+      <button type="submit" class="btn btn-primary">Create</button>
+      </form>
       </div>
     </div>
   </div>
@@ -139,11 +162,11 @@
         </div>
         <div class="modal-body">
           <br>
-
-              <a href="/playlist/">your playlist</a>
-              <br>
-
-
+          <ul id="playlist1">
+              <?php foreach($playlists as $playli): ?>
+                <li><?= $playli['playlistName'] ?><br></li>
+              <?php endforeach; ?>
+          </ul>
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPlaylist">Create New</button>

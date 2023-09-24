@@ -8,12 +8,12 @@ class PlaylistModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'table_playlist';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'playlistId';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['playlistName', 'audioId'];
+    protected $allowedFields    = ['playlistName'];
 
     // Dates
     protected $useTimestamps = false;

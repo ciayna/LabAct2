@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/main', 'MainController::index');
 $routes->post('/addAudio', 'MainController::addAudio');
+$routes->post('/addPlaylist', 'MainController::addPlaylist');

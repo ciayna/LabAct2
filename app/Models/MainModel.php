@@ -8,7 +8,7 @@ class MainModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'table_audio';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'audioId';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
