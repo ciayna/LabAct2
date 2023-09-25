@@ -1,0 +1,47 @@
+CRITICAL - 2023-09-25 07:42:01 --> Undefined array key "playlistId"
+in APPPATH\Views\main.php on line 178.
+ 1 APPPATH\Views\main.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "playlistId"', 'C:\\laragon\\www\\LabAct2\\app\\Views\\main.php', 178)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\LabAct2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(60): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-25 07:53:55 --> Too few arguments to function App\Controllers\MainController::index(), 0 passed in C:\laragon\www\LabAct2\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\MainController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-25 07:54:16 --> Too few arguments to function App\Controllers\MainController::index(), 0 passed in C:\laragon\www\LabAct2\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\MainController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-25 07:55:43 --> Too few arguments to function App\Controllers\MainController::index(), 0 passed in C:\laragon\www\LabAct2\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\MainController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-25 07:59:24 --> Too few arguments to function App\Controllers\MainController::index(), 0 passed in C:\laragon\www\LabAct2\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\MainController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')
+CRITICAL - 2023-09-25 07:59:27 --> Too few arguments to function App\Controllers\MainController::index(), 0 passed in C:\laragon\www\LabAct2\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\MainController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\LabAct2\\public\\index.php')

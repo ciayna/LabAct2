@@ -114,8 +114,14 @@
       </div>
 
       <div class="modal-body">
-        <form action="/addAudio" method="post" enctype="multipart/form-data">
+        <form action="/" method="post" enctype="multipart/form-data">
           <div class="mb-3">
+            <select class="form-control" name="" id="">
+              <option value="">Select from Playlist</option>
+              <?php foreach ($playlists as $playli): ?>
+                <option value="<?= $playli['playlistName'] ?>"><?= $playli['playlistName']?></option>
+              <?php endforeach; ?>
+            </select>    
           </div>
       </div>
 
@@ -162,15 +168,16 @@
         </div>
         <div class="modal-body">
           <br>
+          <?php foreach($playlists as $playli): ?>
+          <form action="/delete/<?= $playli['playlistId'] ?>" method="post">
           <ul id="playlist1">
-              <?php foreach($playlists as $playli): ?>
-                <li><?= $playli['playlistName'] ?><br></li>
+                <li><?= $playli['playlistName'] ?> <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">-</button></li>
               <?php endforeach; ?>
           </ul>
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPlaylist">Create New</button>
-
+        </form>
         </div>
       </div>
     </div>
