@@ -9,3 +9,4 @@ $routes->get('/main', 'MainController::index');
 $routes->post('/addAudio', 'MainController::addAudio');
 $routes->post('/addPlaylist', 'MainController::addPlaylist');
 $routes->get('/delete/(:any)', 'MainController::delete/$1');
+$routes->post('/addToPlaylist', 'MainController::addToPlaylist');

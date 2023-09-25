@@ -135,12 +135,14 @@
       </div>
 
       <div class="modal-body">
-        <form action="/" method="post" enctype="multipart/form-data">
+        <form action="/addToPlaylist" method="post" enctype="multipart/form-data">
           <div class="mb-3">
             <select class="form-control" name="" id="">
               <option value="">Select from Playlist</option>
               <?php foreach ($playlists as $playli): ?>
-                <option value="<?= $playli['playlistName'] ?>"><?= $playli['playlistName']?></option>
+                <option value="<?= $playli['playlistName'] ?>">
+                  <?= $playli['playlistName']?>
+                </option>
               <?php endforeach; ?>
             </select>    
           </div>
@@ -191,9 +193,9 @@
           <?php foreach($playlists as $playli): ?>
           <ul id="playlist1">
                 <li><?= $playli['playlistName'] ?> 
-
-                    <a href="/delete/<?= $playli['playlistId'] ?>" class="delete-button">-</a>
-
+                    <a href="/delete/<?= $playli['playlistId'] ?>" class="delete-button">
+                      -
+                    </a>
                 </li>
               <?php endforeach; ?>
           </ul>
@@ -219,11 +221,12 @@
       <?php foreach ($allAudio as $audio): ?>
           <li data-src='<?php echo base_url("music/" . $audio['audio']); ?>'>
               <?= $audio['audio'] ?>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">+</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">
+                +
+              </button>
           </li>
       <?php endforeach; ?>
   </ul>
-
 
     <div class="modal" id="myModal">
       <div class="modal-dialog">

@@ -6,13 +6,13 @@ class MainController extends BaseController
 {
     private $music;
     private $playlist;
-    private $playliaud;
+    private $addtoplay;
 
     public function __construct()
     {
         $this->music = new \App\Models\MainModel;
         $this->playlist = new \App\Models\PlaylistModel;   
-        $this->playliaud = new \App\Models\PlayliAudModel;      
+        $this->addtoplay = new \App\Models\PlayliAudModel;      
     }
 
     public function addAudio()
@@ -44,6 +44,19 @@ class MainController extends BaseController
     public function delete($playlistId)
     {
         $this->playlist->delete($playlistId);
+        return redirect()->to('/main');
+    }
+
+    public function addToPlaylist() 
+    {
+        $addToPlaylist = [
+            'playlistId' => $this->request->getPost('playlistId'),
+            'audioId' => $this->request->getPost('audioId'),
+        ];
+        if (!empty($addToPlaylist['playlistId']) && !empty($addToPlaylist['audioId'])) 
+        {
+            $this->addtoplay->insert($addToPlaylist);
+        }
         return redirect()->to('/main');
     }
 
