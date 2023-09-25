@@ -133,24 +133,24 @@
         <h5 class="modal-title" id="addToPlaylistLabel">Select from Playlist</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
       <div class="modal-body">
         <form action="/addToPlaylist" method="post" enctype="multipart/form-data">
           <div class="mb-3">
-            <select class="form-control" name="" id="">
-              <option value="">Select from Playlist</option>
-              <?php foreach ($playlists as $playli): ?>
-                <option value="<?= $playli['playlistName'] ?>">
-                  <?= $playli['playlistName']?>
-                </option>
-              <?php endforeach; ?>
-            </select>    
-          </div>
-      </div>
+          <select class="form-control" name="playlistId" id="playlistIdSelect">
+            <option value="">Select from Playlist</option>
+            <?php foreach ($playlists as $playli): ?>
+              <option value="<?= $playli['playlistId'] ?>">
+                <?= $playli['playlistName'] ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
 
-      <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">Add</button>
-      </form>
+          </div>
+          <input type="hidden" id="playlistIdget" name="audioId" value="">
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="addToPlaylistModalSubmit">Add</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@
           <?php foreach($playlists as $playli): ?>
           <ul id="playlist1">
                 <li><?= $playli['playlistName'] ?> 
-                    <a href="/delete/<?= $playli['playlistId'] ?>" class="delete-button">
+                     <a href="/delete/<?= $playli['playlistId'] ?>" class="delete-button"> 
                       -
                     </a>
                 </li>
@@ -219,12 +219,12 @@
   <audio id="audio" controls autoplay></audio>
   <ul id="playlist">
       <?php foreach ($allAudio as $audio): ?>
-          <li data-src='<?php echo base_url("music/" . $audio['audio']); ?>'>
-              <?= $audio['audio'] ?>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addToPlaylist">
-                +
-              </button>
-          </li>
+        <li data-src='<?php echo base_url("music/" . $audio['audio']); ?>'>
+          <?= $audio['audio'] ?>
+            <button type="button" class="btn btn-primary add-to-playlist" data-bs-toggle="modal" data-bs-target="#addToPlaylist" >
+              +
+            </button>
+        </li>
       <?php endforeach; ?>
   </ul>
 
@@ -323,6 +323,20 @@
         });
 
         playTrack(currentTrack);
+    </script>
+
+
+    <script>
+    $(document).ready(function () {
+      const addToPlaylistModal = $("#addToPlaylist");
+      const playlistInput = $("#playlistIdget");
+      const playlistIdSelect = $("#playlistIdSelect");
+
+      $("#addToPlaylistModalSubmit").click(function () {
+      const playli = playlistIdSelect.val();
+      playlistInput.val(playli);
+      });
+    });
     </script>
 </body>
 </html>

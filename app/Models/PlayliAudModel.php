@@ -8,7 +8,7 @@ class PlayliAudModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'table_playliaud';
-    protected $primaryKey       = '';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

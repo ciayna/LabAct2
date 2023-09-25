@@ -52,7 +52,7 @@ class MainController extends BaseController
         $addToPlaylist = [
             'playlistId' => $this->request->getPost('playlistId'),
             'audioId' => $this->request->getPost('audioId'),
-        ];
+        ];        
         if (!empty($addToPlaylist['playlistId']) && !empty($addToPlaylist['audioId'])) 
         {
             $this->addtoplay->insert($addToPlaylist);
