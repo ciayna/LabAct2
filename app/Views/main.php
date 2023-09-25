@@ -75,7 +75,28 @@
      #playlist1 li.active {
          background-color: #007bff;
          color: #fff;
+         
      }
+
+    .delete-button {
+        display: inline-block;
+        padding:8px 15px; 
+        background-color: #0d6efd; 
+        color: white; 
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .delete-button:hover {
+        background-color: #0a58ca; 
+        transition: 0.3s;
+    }
+
+    .delete-button:active {
+        background-color: #0d6efd; 
+    }
+</style>
+
     </style>
 </head>
 <body>
@@ -167,17 +188,18 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <br>
           <?php foreach($playlists as $playli): ?>
-          <form action="/delete/<?= $playli['playlistId'] ?>" method="post">
           <ul id="playlist1">
-                <li><?= $playli['playlistName'] ?> <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">-</button></li>
+                <li><?= $playli['playlistName'] ?> 
+
+                    <a href="/delete/<?= $playli['playlistId'] ?>" class="delete-button">-</a>
+
+                </li>
               <?php endforeach; ?>
           </ul>
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPlaylist">Create New</button>
-        </form>
         </div>
       </div>
     </div>
